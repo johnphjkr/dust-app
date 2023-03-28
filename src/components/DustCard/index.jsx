@@ -16,6 +16,9 @@ function DustCard({ stationName, sidoName, pm10Grade, pm10Value, dataTime, favor
     if (pm10Value > 150) {
         pmGrade = '매우나쁨';
     }
+    if (pm10Value === '–') {
+        pmGrade = '알수없음';
+    }
 
     function getBackgroundColor(pm10Value) {
         if (pm10Value < 31) {
@@ -27,6 +30,9 @@ function DustCard({ stationName, sidoName, pm10Grade, pm10Value, dataTime, favor
         } else if (pm10Value > 150) {
             return { backgroundColor: 'red' };
         }
+        else if (pm10Value === '–') {
+            return { backgroundColor: 'grey' };
+        }
     }
     function getColor(pm10Value) {
         if (pm10Value < 31) {
@@ -37,6 +43,9 @@ function DustCard({ stationName, sidoName, pm10Grade, pm10Value, dataTime, favor
             return { color: 'yellow' };
         } else if (pm10Value > 150) {
             return { color: 'red' };
+        }
+        else if (pm10Value === '–') {
+            return { backgroundColor: 'grey' };
         }
     }
     const handleFavChange = (event) => {
