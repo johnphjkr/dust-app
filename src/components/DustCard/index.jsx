@@ -26,7 +26,7 @@ function DustCard({ stationName, sidoName, pm10Grade, pm10Value, dataTime, favor
         } else if (pm10Value < 81 && pm10Value > 30) {
             return { backgroundColor: '#27cc27' };
         } else if (pm10Value < 151 && pm10Value > 80) {
-            return { backgroundColor: 'yellow' };
+            return { backgroundColor: '#e2b82d' };
         } else if (pm10Value > 150) {
             return { backgroundColor: 'red' };
         }
@@ -40,7 +40,7 @@ function DustCard({ stationName, sidoName, pm10Grade, pm10Value, dataTime, favor
         } else if (pm10Value < 81 && pm10Value > 30) {
             return { color: '#27cc27' };
         } else if (pm10Value < 151 && pm10Value > 80) {
-            return { color: 'yellow' };
+            return { color: '#e2b82d' };
         } else if (pm10Value > 150) {
             return { color: 'red' };
         }
